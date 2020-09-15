@@ -1,13 +1,12 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: `Rocket Docs`,
-    defaultTitle: `Rocket Docs`,
-    siteTitleShort: `Rocket Docs`,
-    siteDescription: `Out of the box Gatsby Theme for creating documentation websites easily and quickly`,
-    siteUrl: `https://rocketdocs.netlify.com`,
-    siteAuthor: `@rocketseat`,
-    siteImage: `/banner.png`,
-    siteLanguage: `en`,
+    siteTitle: `SuriDocz`,
+    defaultTitle: `SuriDocz`,
+    siteTitleShort: `SuriDocz`,
+    siteDescription: `Um simples sites para listar meus arquivos de estudos e aprendizados.`,
+    siteUrl: `https://docz.felipesuri.com`,
+    siteAuthor: `@_felipesuri`,
+    siteLanguage: `pt-BR`,
     themeColor: `#8257E6`,
     basePath: `/`,
   },
@@ -24,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Rocketseat Gatsby Themes`,
-        short_name: `RS Gatsby Themes`,
+        name: `SuriDocz`,
+        short_name: `SuriDocz`,
         start_url: `/`,
         background_color: `#ffffff`,
         display: `standalone`,
@@ -43,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://rocketdocs.netlify.com`,
+        siteUrl: `https://docz.felipesuri.com`,
       },
     },
     `gatsby-plugin-offline`,
