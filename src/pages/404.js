@@ -10,8 +10,7 @@ export default function NotFound() {
       <SEO title="404: Não encontrada" />
       <p>Você está tentando acessar uma página que não existe... isso é triste.</p>
       <p>
-        Se você quiser voltar para a página inicial
-        <Link to="/">clique aqui</Link>
+        Se você quiser voltar para a página inicial <Link to="/">clique aqui</Link>
       </p>
     </Layout>
   )
