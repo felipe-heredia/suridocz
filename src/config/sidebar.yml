@@ -1,24 +1,22 @@
 # Sidebar navigation
 
-- label: 'Introduction'
+- label: 'Página Inicial'
   link: '/'
-- label: 'Getting started'
-  link: '/getting-started'
-- label: Usage
+- label: 'Motivos para ter feito este site'
+  link: '/motivos-do-site'
+- label: 'Aprendendo'
   items:
-    - label: 'Creating docs'
-      link: '/usage/creating-docs'
-    - label: 'Navigation'
-      link: '/usage/navigation'
-    - label: 'Shadowing'
-      link: '/usage/shadowing'
-- label: More
+    - label: 'Conceitos de Docker'
+      link: '/learning/conceitos-docker'
+    - label: 'Entendendo Backend'
+      link: 'learning/backend-para-iniciantes'
+    - label: '🚧 Introdução à computação'
+      link: '/learning/introducao-a-computacao'
+- label: 'Resumos'
   items:
-    - label: FAQ
-      link: /faq
-    - label: Changelog
-      link: /changelog
-- label: Community
-  items:
-    - label: 'Github'
-      link: https://github.com/rocketseat/gatsby-themes
+    - label: 'Devo fazer faculdade?'
+      link: '/summary/devo-fazer-faculdade'
+    - label: 'Primeira Expansion Week'
+      link: '/summary/expansion-week-01'
+    - label: '14 Hábitos de Desenvolvedores altamente produtivos'
+      link: '/summary/zeno_book'
