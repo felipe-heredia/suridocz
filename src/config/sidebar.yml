@@ -12,7 +12,7 @@
       link: 'learning/backend-para-iniciantes'
     - label: '🚧 Introdução à computação'
       link: '/learning/introducao-a-computacao'
-    - label: '🚧 Princípios SOLID'
+    - label: 'Princípios SOLID'
       link: '/learning/solid'
 - label: 'Resumos'
   items:

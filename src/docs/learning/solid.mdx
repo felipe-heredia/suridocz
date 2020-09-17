@@ -164,3 +164,116 @@ imprimeNome(objeto1); // Meu Nome é A
 imprimeNome(objeto2); // Meu nome é B
 ```
 
+Para não violar esse princípio, precisamos usar injeção de dependências e utilizar outros princípios SOLID.
+
+### Interface Segregation Principle
+
+Neste princípio, uma classe não deve ser forçada a entregar métodos que não serão utilizados.
+
+É melhor criar interfaces mais específicas para ele do que ter interfaces genéricas, vamos ao código:
+
+```ts
+interface Aves {
+    public function setLocalizacao(longitude: string, latitude: string);
+    public function setAltitude(altitude: string);
+    public function renderizar();
+}
+
+class Papagaio implements Aves {
+    public function setLocalizacao(longitude: string, latitude: string) {/*...*/}
+    public function setAltitude(altitude: string) {/*...*/}
+    public function renderizar() {/*...*/}
+}
+
+class Pinguim implements Aves {
+    public function setLocalizacao(longitude: string, latitude: string) {/*...*/}
+    public function setAltitude(altitude: string) {
+        // Não faz nada... Pinguins não voam!
+    }
+    public function renderizar() {/*...*/}
+}
+```
+
+Com este código, a função "setAltitude" tornou-se sem sentido na classe Pinguim, visto que eles não voam.
+
+Vamos então ajeitar esse problema da seguinte forma:
+
+```ts
+interface Aves {
+    public function setLocalizacao(longitude: string, latitude: string);
+    public function renderizar();
+}
+
+interface AvesQueVoam extends Aves {
+    public function setAltitude(altitude: string);
+}
+
+class Papagaio implements AvesQueVoam {
+    public function setLocalizacao(longitude: string, latitude: string) {/*...*/}
+    public function setAltitude(altitude: string) {/*...*/}
+    public function renderizar() {/*...*/}
+}
+
+class Pinguim implements Aves {
+    public function setLocalizacao(longitude: string, latitude: string) {/*...*/}
+    public function renderizar() {/*...*/}
+}
+```
+
+
+
+Desta forma, com uma mudança simples, podemos fazer com que os comportamentos das AvesQueVoam seja separados, e se tiverem mais aves que não voam, não será preciso deixar uma função sem ser utilizada nesta classe.
+
+### Dependency Inversion Principle
+
+Este princípio diz que devemos depender de abstrações e não de implementações.
+
+Vamos para o código para que seja entendido:
+
+```ts
+use MySQLConnection;
+
+class PasswordReminder {
+    private dbConnection;
+    
+    public function __construct() {
+        this.dbConnection = new MySQLConnection();
+    }
+    
+    {/*...*/}
+}
+```
+
+Neste exemplo, a classe PasswordReminder têm a responsabilidade de criar uma instância da classe `MySQLConnection` e caso for necessário usar a classe PasswordReminder para outro local, seria necessário levar a MySQLConnection junto, deixando assim com um acoplamento forte.
+
+Então, vamos ajeitar este prolema da seguinte forma:
+
+```ts
+interface DBConnectionInterface {
+    public function connect();
+}
+
+class MySQLConnection implements DBConnectionInterface {
+    public functio connect() {/*...*/}
+}
+
+class OracleConnection implements DBConnectionInterface {
+    public function connect() {/*...*/}
+}
+
+class PasswordReminder {
+    private dbConnection;
+    
+    public function __construct( dbConnection: DBConnectionInterface ) {
+        this.dbConnection = dbConnection;
+    }
+    
+    // Faz alguma coisa
+}
+```
+
+Com este novo código, a criação do MySQLConnection deixa de ser responsabilidade da classe e passa ser uma dependência que deve ser injetada como um método construtor.
+
+Desta forma, também nos ajeitamos para dentro de outros princípios, assim fazendo com que a classe PasswordReminder não saiba qual é o banco de dados que estamos utilizando.
+
+Desta forma, podemos trocar o banco de dados sem com que quebre a nossa conexão com o banco de dados.
