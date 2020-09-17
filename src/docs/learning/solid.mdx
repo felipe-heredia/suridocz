@@ -1,0 +1,166 @@
+---
+title: 'Princípios SOLID'
+description: Aprendendo SOLID
+---
+
+
+
+## O que cada letra do SOLID significa?
+
+- *S* refere-se á Single Responsability Principle, ou seja Princípio da responsabilidade única;
+- *O* refere-se á Open-Closed Principle, ou seja Princípio aberto e fechado;
+- *L* refere-se á Liskov Substitution Principle, ou seja Princípio da substituição de Liskov;
+- *I* refere-se á Interface Segregation Principle, ou seja Princípio da segregação da interface;
+- *D* refere-se á Dependency Inversion Principle, ou seja Princípio da Inversão da dependência;
+
+### Single Responsability Principle
+
+Este princípio nos diz que uma classe deve ser especializada em apenas um assunto e possuir apenas uma responsabilidade.
+
+Quando fazemos uma classe que possui diversas responsabilidades, ao precisar modificar apenas uma, podemos acabar quebrando todas as outras responsabilidades, causando assim um efeito dominó e que resultará na quebra da classe e necessidade de modificar toda aquela classe, pelo simples motivo de precisar modificar uma função.
+
+```ts
+class Order {
+    public function calculateTotalSum() {/*...*/}
+    public function getItems() {/*...*/}
+    public function getItemCount() {/*...*/}
+    public function addItem(item: object) {/*...*/}
+    public function deleteItem(item: object) {/*...*/}
+
+    public function printOrder() {/*...*/}
+    public function showOrder() {/*...*/}
+
+    public function load() {/*...*/}
+    public function save() {/*...*/}
+    public function update() {/*...*/}
+    public function delete() {/*...*/}
+}
+```
+
+Esta class está de forma totalmente errada conforme o *S* do princípio SOLID, pois ela realiza três tipos diferentes de tarefas, ela precisa lidar com informações, exibição e manipulação dos dados.
+
+A violação deste princípio gerará alguns problemas no seu software:
+
+- Falta de coesão;
+- Alto acoplamento;
+- Dificuldades de implementar testes automatizados;
+- Dificuldade de reaproveitamento;
+
+Vamos ver então como essa classe deveria ser:
+
+```ts
+class Order {
+    public function calculateTotalSum() {/*...*/}
+    public function getItems() {/*...*/}
+    public function getItemCount() {/*...*/}
+    public function addItem(item: object) {/*...*/}
+    public function deleteItem(item: object) {/*...*/}
+}
+
+class OrderRepository {
+    public function load(orderId: string) {/*...*/}
+    public function save(order: object) {/*...*/}
+    public function update(order: object) {/*...*/}
+    public function delete(order: object) {/*...*/}
+}
+
+class OrderViewer {
+    public function printOrder(order: object) {/*...*/}
+    public function showOrder(order: object) {/*...*/}
+}
+```
+
+Este principio não se limita a classes, ele deve ser aplicado em tudo que é responsável por executar uma ação.
+
+Apenas com esse princípio, seu código será mais limpo e com uma fácil manutenção.
+
+### Open-Closed Principle
+
+Este princípio nos diz que objetos ou entidades devem estar abertos para extensão mas fechados para manutenção.
+
+Quando recursos precisam ser adicionados, devemos estender e não alterar o código original.
+
+```ts
+class ContratoClt {
+    public function salario() {/*...*/}
+}
+
+class Estagio {
+    public function bolsaAuxilio() {/*...*/}
+}
+
+class FolhaDePagamento {
+    private saldo;
+
+    public function calcular(contrato) {
+        if (contrato instanceof ContratoClt) {
+            this.saldo = contrato.salario();
+        } else if (contrato instanceof Estagio) {
+            this.saldo = contrato.bolsaAuxilio()
+        }
+    }
+}
+```
+
+Ao alterar uma classe existente para adicionar um novo comportamento, podemos introduzir bugs em nosso software que já funcionava.
+
+Para adicionar um novo método de pagamento (PJ) devemos fazer de seguinte forma:
+
+```ts
+interface Remuneravel {
+    public function remuneracao();
+}
+
+class ContratoClt implements Remuneravel {
+    public function remuneracao() {/*...*/}
+}
+
+class ContratoPj implements Remuneravel {
+    public function remuneracao() {/*...*/}
+}
+
+class Estagio implements Remuneravel {
+    public function remuneracao() {/*...*/}
+}
+
+class FolhaDePagamento {
+    private saldo;
+
+    public function calcular(contrato: Remuneravel) {
+        this.saldo = contrato.remuneracao();
+    }
+}
+```
+
+Desta forma, isolamos o comportamento que pode ser extensível através de uma interface, assim adicionar novos contratos seria uma forma fácil e não quebraria nossa aplicação.
+
+### Liskov Substitution Principle
+
+Este princípio diz que uma classe derivada deve ser substitutível por sua classe base.
+
+Vamos entender direto com código, visto que a explicação é um pouco confusa:
+
+```ts
+class A {
+    public function getNome() {
+        console.log('Meu nome é A');
+    }
+}
+
+class B extends A {
+    public function getNome() {
+        console.log('Meu nome é B')
+    }
+}
+
+let objeto1 = new A;
+let objeto2 = new B;
+
+function imprimeNome(objeto: A) {
+    return objeto.getNome();
+}
+
+imprimeNome(objeto1); // Meu Nome é A
+imprimeNome(objeto2); // Meu nome é B
+```
+
