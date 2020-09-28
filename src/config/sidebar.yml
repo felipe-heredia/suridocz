@@ -14,6 +14,8 @@
       link: '/learning/introducao-a-computacao'
     - label: 'Princípios SOLID'
       link: '/learning/solid'
+    - label: 'Redux Yaje'
+      link: '/learning/redux-yaje'
 - label: 'Resumos'
   items:
     - label: 'Devo fazer faculdade?'
