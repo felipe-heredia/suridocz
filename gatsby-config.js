@@ -16,7 +16,7 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
-        githubUrl: `https://github.com/felipesuri/suridocz`,
+        repositoryUrl: `https://github.com/felipesuri/suridocz`,
       },
     },
     {
