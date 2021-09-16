@@ -1,19 +1,15 @@
 <p align="center">
-  <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/theme-docs.svg" alt="A illustration of file that is the @rocketseat/gatsby-theme-docs logo" width="100">
+    <img src="https://github.com/mrcrmn/docc/raw/master/static/logo.jpg" alt="Docc Logo" width="450">
 </p>
 
-<h2 align="center">
-  SuriDocz
-</h2>
+A starter documentation theme for [Gridsome](https://gridsome.org/).
 
-<p align="center">
-  Este é um simples site para listar meus documentos com aprendizados e resumos.
-</p>  
+## Installation
 
-## 📄 Docz
+If you have the Gridsome CLI installed, simply run:
 
-Você pode ver a minha documentação [aqui](https://docz.felipesuri.com).
+`gridsome create your-project https://github.com/mrcrmn/docc`
 
----
+## Documentation
 
-Feito com 💜 por FelipeSuri.
+Documentation can be found [here](https://docc-theme.netlify.com/).

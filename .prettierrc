@@ -1,4 +1,5 @@
 {
+  "endOfLine": "lf",
   "printWidth": 90,
   "arrowParens": "avoid",
   "semi": false,
