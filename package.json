@@ -1,6 +1,10 @@
 {
   "name": "suridocz",
   "private": true,
+  "version": "2.0.0",
+  "description": "A simple site for my docs.",
+  "author": "felipesuri <felipe@felipesuri.com> (@_felipesuri)",
+  "license": "MIT",
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
