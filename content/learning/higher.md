@@ -1,9 +1,11 @@
 ---
 description: 'Só codar não é suficiente, por isso o Higher foi construído, para desenvolvedor habilidades além de código.'
 sidebar: 'learning'
-prev: 'docs/learning/conceitos-docker'
-next: 'docs/learning/higher'
+prev: '/learning/solid/'
+next: '/learning/introducao-a-computacao'
 ---
+
+# Higher - Curso Rocketseat
 
 Higher é um curso disponibilizado na plataforma Ignite da [Rocketseat](https://rocketseat.com.br)
 
@@ -32,17 +34,17 @@ Para permanecer relevante no mercado de software, precisamos aprender e nos apri
 
 Para não sermos refém disso, precisamos **continuar curiosos**, no mercado de trabalho precisamos ser autodidata. Podemos ter auxílio de alguém para dar partida no avião, porém o voo é solo, não haverá ninguém para lhe auxiliar, por isso você deve aprender a ser autodidata.
 
-*Para continuar evoluindo, precisamos nos manter inquietos, buscas desafios, questionar "o quê?" e "como?" podemos resolver um problema.*
+_Para continuar evoluindo, precisamos nos manter inquietos, buscas desafios, questionar "o quê?" e "como?" podemos resolver um problema._
 
 Nem sempre um bug na aplicação esta relacionada a implementação incorreta de uma regra de negócio, mas pode estar relacionado com o tempo de execução de uma função, ao ambiente em que a aplicação está hospedada, á falta de testes e por ai vai. Antes de atacar o problema, precisamos identificá-lo.
 
-*Você só descobrirá a resolução quando utilizar a curiosidade para ir além daquilo que está na sua frente.*
+_Você só descobrirá a resolução quando utilizar a curiosidade para ir além daquilo que está na sua frente._
 
 Problemas recorrentes costumam sem sintomas de problemas muito mais profundos que estão escondidos.
 
 **Técnica simples para resolver problemas:** `The 5-Why conecpt`, onde chegaremos à raiz do problema com a dúvida do "por que?".
 
-**Como a técnica funciona**:  você identifica um problema e pergunta cinco vezes o por que, até chegar na causa raiz daquele problema. Quando ao perguntar por que você não encontrar mais respostas úteis e perceber que não dá mais para ir além, esse é o momento de parar de se perguntar.
+**Como a técnica funciona**: você identifica um problema e pergunta cinco vezes o por que, até chegar na causa raiz daquele problema. Quando ao perguntar por que você não encontrar mais respostas úteis e perceber que não dá mais para ir além, esse é o momento de parar de se perguntar.
 
 Outras técnicas simples: Mapas mentais, diagramas, brainstorming, análise de causa e efeito e outros diversos.
 
@@ -90,6 +92,6 @@ Se o seu caso não for o acima, ele pode ser simplesmente falta do que estudar, 
 
 Nós nunca saberemos tudo e o foco é o que te levará a ter o melhor aproveitamento do que se estuda.
 
-Outra situação pode ser a falta de energia e vontade que te leva a deixar pra depois, isso leva a dificuldade de lidar com  o sentimento negativo relacionado á aquela tarefa. Não fazer aquela tarefá agora, levará você ao sentimento de alívio e prazer momentâneo isso é um dos significados e motivos da procrastinação.
+Outra situação pode ser a falta de energia e vontade que te leva a deixar pra depois, isso leva a dificuldade de lidar com sentimento negativo relacionado á aquela tarefa. Não fazer aquela tarefá agora, levará você ao sentimento de alívio e prazer momentâneo isso é um dos significados e motivos da procrastinação.
 
 Pergunte-se: "Onde estou?", "Onde quero chegar?" e "Por quê quero chegar lá?"

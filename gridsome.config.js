@@ -10,30 +10,39 @@ module.exports = {
     twitter: process.env.URL_TWITTER || false,
     github: process.env.URL_GITHUB || false,
     nav: {
-      links: [{ path: '/docs/', title: 'Docz' }],
+      links: [
+        { path: '/learning', title: 'Aprendendo' },
+        { path: '/summary', title: 'Resumos' },
+      ],
     },
     sidebar: [
       {
-        name: 'docs',
+        name: 'learning',
         sections: [
           {
             title: 'Aprendendo',
             items: [
-              '/docs/learning/backend-para-iniciantes/',
-              '/docs/learning/conceitos-docer/',
-              '/docs/learning/higher/',
-              '/docs/leaning/introducao-a-computacao/',
-              '/docs/learning/solid/',
+              '/learning/',
+              '/learning/backend-para-iniciantes/',
+              '/learning/conceitos-docker/',
+              '/learning/higher/',
+              '/learning/introducao-a-computacao/',
+              '/learning/solid/',
             ],
           },
+        ],
+      },
+      {
+        name: 'summary',
+        sections: [
           {
             title: 'Resumos',
             items: [
-              '/docs/summary/como-escrever-bem/',
-              '/docs/summary/como-escrever-introducoes/',
-              '/docs/summary/devo-fazer-faculdade/',
-              '/docs/summary/expansion-week-01/',
-              '/docs/summary/zeno-book',
+              '/summary/',
+              '/summary/como-escrever-bem/',
+              '/summary/como-escrever-introducoes/',
+              '/summary/devo-fazer-faculdade/',
+              '/summary/expansion-week-01/',
             ],
           },
         ],

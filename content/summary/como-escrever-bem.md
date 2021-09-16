@@ -2,8 +2,11 @@
 title: '7 dicas de como escrever bem'
 description: 'Dicas de redação para escrever melhor.'
 sidebar: 'summary'
-next: 'docs/summary/como-ecrever-introducoes'
+prev: '/summary/'
+next: '/summary/como-escrever-introducoes/'
 ---
+
+# 7 dicas de como escrever bem
 
 Neste documento, iremos nos aprofundar em diversas dicas para deixar nossos textos melhores e não fazer com que o leitor fique cansado ao ler nossos textos.
 
@@ -15,7 +18,7 @@ Palavras repetidas dão um ritmo de leitura e uma mágica, uma conexão.
 
 Para poder aproveitar ao máximo essa dica, devemos usar a repetição no máximo 3 vezes, pois mais do que isso, o nosso cérebro não conseguirá detectar um padrão e verá como um exagero.
 
-## Dica #2 Regra do Três 
+## Dica #2 Regra do Três
 
 A regra do três é você listar 3 itens para trazer uma forte conexão desses itens, devemos usar apenas três vezes para o cérebro detectar esse padrão.
 

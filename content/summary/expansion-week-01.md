@@ -1,6 +1,10 @@
 ---
 title: Primeira Expansion Week
+sidebar: 'summary'
+prev: '/summary/devo-fazer-faculdade/'
 ---
+
+# Primeira Expansion Week
 
 ## Habilidades técnicas
 

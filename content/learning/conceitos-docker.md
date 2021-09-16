@@ -1,9 +1,10 @@
 ---
 description: 'Aprendendo os conceitos de Docker'
 sidebar: 'learning'
-prev: '/docs/backend-para-iniciantes/'
-next: '/docs/settings/'
+next: '/learning/backend-para-iniciantes/'
 ---
+
+# Conceitos Docker
 
 Neste documento irei entender o básico de como o Docker funciona.
 

@@ -1,18 +1,20 @@
 ---
 title: 'Princípios SOLID'
 description: 'Neste documento, vamos aprender sobre os princípios do SOLID.'
-prev: 'docs/learning/introducao-a-computacao'
+sidebar: 'learning'
+prev: '/learning/introducao-a-computacao/'
+next: '/summary/'
 ---
 
-
+# Princípios SOLID
 
 ## O que cada letra do SOLID significa?
 
-- *S* refere-se á Single Responsability Principle, ou seja Princípio da responsabilidade única;
-- *O* refere-se á Open-Closed Principle, ou seja Princípio aberto e fechado;
-- *L* refere-se á Liskov Substitution Principle, ou seja Princípio da substituição de Liskov;
-- *I* refere-se á Interface Segregation Principle, ou seja Princípio da segregação da interface;
-- *D* refere-se á Dependency Inversion Principle, ou seja Princípio da Inversão da dependência;
+- _S_ refere-se á Single Responsability Principle, ou seja Princípio da responsabilidade única;
+- _O_ refere-se á Open-Closed Principle, ou seja Princípio aberto e fechado;
+- _L_ refere-se á Liskov Substitution Principle, ou seja Princípio da substituição de Liskov;
+- _I_ refere-se á Interface Segregation Principle, ou seja Princípio da segregação da interface;
+- _D_ refere-se á Dependency Inversion Principle, ou seja Princípio da Inversão da dependência;
 
 ### Single Responsability Principle
 
@@ -38,7 +40,7 @@ class Order {
 }
 ```
 
-Esta class está de forma totalmente errada conforme o *S* do princípio SOLID, pois ela realiza três tipos diferentes de tarefas, ela precisa lidar com informações, exibição e manipulação dos dados.
+Esta class está de forma totalmente errada conforme o _S_ do princípio SOLID, pois ela realiza três tipos diferentes de tarefas, ela precisa lidar com informações, exibição e manipulação dos dados.
 
 A violação deste princípio gerará alguns problemas no seu software:
 
@@ -221,8 +223,6 @@ class Pinguim implements Aves {
 }
 ```
 
-
-
 Desta forma, com uma mudança simples, podemos fazer com que os comportamentos das AvesQueVoam seja separados, e se tiverem mais aves que não voam, não será preciso deixar uma função sem ser utilizada nesta classe.
 
 ### Dependency Inversion Principle
@@ -236,11 +236,11 @@ use MySQLConnection;
 
 class PasswordReminder {
     private dbConnection;
-    
+
     public function __construct() {
         this.dbConnection = new MySQLConnection();
     }
-    
+
     {/*...*/}
 }
 ```
@@ -264,11 +264,11 @@ class OracleConnection implements DBConnectionInterface {
 
 class PasswordReminder {
     private dbConnection;
-    
+
     public function __construct( dbConnection: DBConnectionInterface ) {
         this.dbConnection = dbConnection;
     }
-    
+
     // Faz alguma coisa
 }
 ```

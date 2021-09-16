@@ -1,8 +1,11 @@
 ---
 description: 'Como iniciante, vamos entender como funciona o backend.'
 sidebar: 'learning'
-next: '/docs/conceitos-docker/'
+prev: '/learning/'
+next: '/learning/introducao-a-computacao/'
 ---
+
+# Entendo backend (para iniciantes)
 
 Tecnologias são ferramentas, ferramentas foram criadas com um propósito, por isso não existe uma tecnologia que resolva todos os problemas.
 

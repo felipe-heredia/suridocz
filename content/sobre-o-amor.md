@@ -11,4 +11,4 @@ A proteção é algo muito importante, eu quero (e vou) estar do seu lado te pro
 
 Por isso esse simples - mas com o coração - presente para você, um pingente vermelho, nem preciso entrar no detalhe sobre o que a cor vermelha significa para nós. Este presente significa que estarei no seu peito a todo momento com você, independente do local que for eu estarei com você nessa simples pedra vermelha próxima ao seu peito.
 
-*"Amar não é aceitar tudo. Aliás: onde tudo é aceito, desconfio que há falta de amor."*
+_"Amar não é aceitar tudo. Aliás: onde tudo é aceito, desconfio que há falta de amor."_

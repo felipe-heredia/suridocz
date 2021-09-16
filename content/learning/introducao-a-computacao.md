@@ -1,9 +1,12 @@
 ---
 title: Guia de introdução a computação
 description: ''
-prev: 'docs/learning/higher'
-next: 'docs/learning/solid'
+sidebar: 'learning'
+prev: '/learning/higher/'
+next: '/learning/solid/'
 ---
+
+# Guia de Introdução à computação
 
 ## 🚧 Em construção
 

@@ -1,7 +1,12 @@
 ---
-title: Devo fazer faculdade?
-description: Se você quiser ser mais um, não deve fazer faculdade.
+title: 'Devo fazer faculdade?'
+description: 'Se você quiser ser mais um, não deve fazer faculdade.'
+sidebar: 'summary'
+prev: '/summary/como-escrever-introducoes/'
+next: '/summary/expansion-week-01/'
 ---
+
+# Devo fazer faculdade?
 
 É muito fácil fazer o básico, qualquer um consegue. Isso se chama mão de obra barata, seu salário não tem motivo para aumentar, pois cada vez mais pessoas sabem fazer o mesmo que você.
 
